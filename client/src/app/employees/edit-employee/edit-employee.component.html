@@ -1,0 +1,47 @@
+<h1 class="alert alert-success text-center fs-1">Edit Employee</h1>
+<div class="container">
+<form (ngSubmit)="onSubmit()" class="col-8">
+  <div>
+    <label class="mt-3">First Name</label>
+    <input [(ngModel)]="this.employee.firstName" name="firstName" class="form-control"/>
+  </div>
+
+  <div>
+    <label class="mt-3">Last Name</label>
+    <input [(ngModel)]="this.employee.lastName" name="lastName" class="form-control"/>
+  </div>
+
+
+  <div>
+    <label class="mt-3">Position</label>
+    <input [(ngModel)]="this.employee.position" name="position" class="form-control"/>
+  </div>
+
+  <div>
+    <label class="mt-3">Salary</label>
+    <input [(ngModel)]="this.employee.salary" name="salary" class="form-control"/>
+  </div>
+
+  <!-- <div>
+    <label class="mt-3">Department</label>
+    <input [(ngModel)]="employee.department" name="department" class="form-control"/>
+  </div> -->
+
+
+  <div>
+    <label class="mt-3">Department</label>
+    <select [(ngModel)]="employee.departmentId" name="departmentId" class="form-control">
+
+      @for (department of this.allDepartments;
+      track department) {
+        <option [value]="department._id">{{department.name}}</option>
+      }
+
+    </select>
+  </div>
+  <button type="submit" class="btn btn-success mt-3">Edit Employee</button>
+</form>
+
+</div>
+
+

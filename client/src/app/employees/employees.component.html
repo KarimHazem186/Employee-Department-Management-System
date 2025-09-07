@@ -1,0 +1,50 @@
+<h1 class="alert alert-success text-center">Employees Page</h1>
+
+<div class="row m-3">
+  <div class="input-group col-12" style="width: 100%;">
+    <input [(ngModel)] ="this.searchText"
+    name="searchText"/>
+    <button type="submit" (click)="search()"
+     class="btn btn-secondary">
+      <i class="bi bi-search"></i></button>
+  </div>
+</div>
+
+<div class="container">
+<table class="table table-bordered table-hover caption-top text-center">
+<caption class="fs-1 text-center">Employees</caption>
+<thead class="table-dark">
+<tr><th>_Id</th><th>First Name</th><th>Last Name</th><th>Position</th><th>Salary</th>
+  <!-- <th>Department</th> -->
+  <th>CreatedDate</th><th>Actions</th></tr>
+</thead>
+@for(employee of this.allEmployees;
+  track employee) {
+    <tr>
+      <td>{{employee._id}}</td>
+      <td>{{employee.firstName}}</td>
+      <td>{{employee.lastName}}</td>
+      <td>{{employee.position}}</td>
+      <td>{{employee.salary}}</td>
+      <!-- <td>{{employee.department}}</td> -->
+      <td>{{employee.createdDate}}</td>
+      <td>
+        <a routerLink="details/{{employee._id}}" class="" title="Details">
+          <i class="btn btn-primary bi bi-list-ul"></i>
+        </a>
+
+          <a routerLink="edit/{{employee._id}}"  title="Edit">
+            <i class="btn btn-success bi bi-pencil-square"></i>
+          </a>
+
+            <a routerLink="delete/{{employee._id}}" class="" title="Delete">
+              <i class="btn btn-danger bi bi-trash"></i>
+            </a>
+    </td>
+    </tr>
+  }
+</table>
+<a routerLink="add" class="btn btn-success">Create New Employee</a>
+</div>
+
+

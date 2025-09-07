@@ -1,0 +1,26 @@
+<h1 class="alert alert-danger text-center fs-1 m-3">Are you sure you want to delete this?</h1>
+
+<div class="container">
+
+  <table class="table table-bordered table-hover text-center">
+    <tbody>
+      <tr><th>_Id</th><td>{{this.employee._id}}</td></tr>
+      <tr><th>First Name</th><td>{{this.employee.firstName}}</td></tr>
+
+      <tr><th>Last Name</th><td>{{this.employee.lastName}}</td></tr>
+
+      <tr><th>Position</th><td>{{this.employee.position}}</td></tr>
+
+      <tr><th>Salary</th><td>{{this.employee.salary }} EGP</td></tr>
+
+      <tr><th>Department</th><td>{{this.department.name}}</td></tr>
+
+      <tr><th>Created Date</th><td>{{this.employee.createdDate}}</td></tr>
+
+    </tbody>
+  </table>
+
+  <button class="btn btn-danger col-3"  (click)="delete()">Confirm Delete</button>
+  <a routerLink="/employees" class="btn btn-primary col-3">Back to List</a>
+</div>
+

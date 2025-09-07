@@ -1,0 +1,16 @@
+img{
+  width: 100%;
+}
+
+.card div span{
+color: red;
+}
+
+.card div{
+margin-top: 200px;
+margin-bottom: 100px;
+}
+
+.footer{
+margin-bottom: 200px;
+}
