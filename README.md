@@ -62,6 +62,3 @@ And in your `angular.json`:
    ```
    The frontend runs on `http://localhost:4200`.
 
-## License
-
-MIT
