@@ -62,3 +62,13 @@ And in your `angular.json`:
    ```
    The frontend runs on `http://localhost:4200`.
 
+   ---
+
+## 🛠️ Icon Tool
+
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-green?logo=mongodb)
+![Express](https://img.shields.io/badge/Backend-Express.js-black?logo=express)
+![Angular](https://img.shields.io/badge/Frontend-Angular-red?logo=angular)
+![Node.js](https://img.shields.io/badge/Server-Node.js-green?logo=node.js)
+![Bootstrap](https://img.shields.io/badge/UI-Bootstrap-blue?logo=bootstrap)
+![Icons](https://img.shields.io/badge/Icons-Bootstrap_Icons-purple?logo=bootstrap)
